@@ -22,8 +22,17 @@ $(document).ready(function() {
 
     function askQuestion(question) {
         //display question info
+        $('#question-display').text(question.question);
+        $('#a').text('A: ' + question.a);
+        $('#b').text('B: ' + question.b);
+        $('#c').text('C: ' + question.c);
+        $('#d').text('D: ' + question.d);
         //start timer
+
         //when user clicks button, evaluate answer and go to display answer view
+        // $('.answer-button').on('click', function() {
+            
+        // });
     } 
 
     function answerQuestion(question, response) {
