@@ -18,15 +18,17 @@ $(document).ready(function() {
         correct = 0;
         incorrect = 0;
         currentQuestion = 0;
+
+        askQuestion(questions[currentQuestion]);
     }
 
     function askQuestion(question) {
         //display question info
-        $('#question-display').text(question.question);
-        $('#a').text('A: ' + question.a);
-        $('#b').text('B: ' + question.b);
-        $('#c').text('C: ' + question.c);
-        $('#d').text('D: ' + question.d);
+        $('#main-text').text(question.question);
+        makeButton('a',question.a);
+        makeButton('b',question.b);
+        makeButton('c',question.c);
+        makeButton('d',question.d);
         //start timer
 
         //when user clicks button, evaluate answer and go to display answer view
@@ -38,15 +40,29 @@ $(document).ready(function() {
     function answerQuestion(question, response) {
         if (response === question.right) {
             //display happy message
+            correct++;
         }
         else {
             //display what the user chose and the correct answer
-            //
+            incorrect++;
+            
         }
         //after timer, move to next question
         //askQuestion(questions[++currentQuestion]);
     }
 
+    function makeButton(choice, answer) {
+        var btn = $('<button>');
+        btn.text(answer);
+        btn.addClass('answer-button');
+        btn.attr('option', choice);
+        $('#main-display').append(btn);
+    }
+
+    $(document).on('click','.answer-button',function() {
+
+    });
+
     newGame();
-    $('#test').text(correct + ' ' + incorrect + ' ' + currentQuestion);
+    // askQuestion(questions[0]);
 });

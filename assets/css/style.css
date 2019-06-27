@@ -2,6 +2,7 @@ body {
     background-color: #74A6D5;
     align-content: center;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
 
 header {
@@ -17,7 +18,7 @@ header {
 
 section {
     background-color: #D574A6;
-    width: 960px;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     height: 100%;
@@ -27,7 +28,6 @@ section {
 
 p {
     padding: 18px;
-    font-size: 1.2em;
 }
 
 #toptext {
@@ -35,4 +35,30 @@ p {
     font-weight: bolder;
     position: relative;
     top: 8px;
+}
+
+button {
+    width: 100%;
+    background-color: #D574A6;
+    /* height: 40px; */
+    border: 2px solid white;
+    border-radius: 0;
+    margin: 4px;
+    font-size: inherit;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: #74A6D5;
+    margin-left: 0px;
+}
+
+@media (max-width: 600px) {
+    section {
+        width: 95%;
+    }
+}
+
+#main-text {
+    font-size: 1.5em;
 }
