@@ -7,11 +7,17 @@ $(document).ready(function() {
                       d: 'All of the above',
                       right: 'd'},
                     {question: 'How do flowers work?',
-                     a: 'Who are you',
-                     b: 'Witchcraft',
-                     c: 'Double witchcraft',
-                     d: 'What did you do with my wallet?',
-                     right: 'c'}
+                      a: 'Who are you',
+                      b: 'Witchcraft',
+                      c: 'Double witchcraft',
+                      d: 'What did you do with my wallet?',
+                      right: 'c'},
+                     {question: 'Is this your towel?',
+                      a: 'For real who are you?',
+                      b: 'Where am I?',
+                      c: 'Yes',
+                      d: 'No',
+                      right: 'd'}
                     ];
     
     function newGame() {
